@@ -4,3 +4,5 @@ dmenu
 picom
 pulseaudio
 pulsemixer
+ttf-cousine-nerd
+alacritty
