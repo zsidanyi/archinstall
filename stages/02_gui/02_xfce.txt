@@ -1,4 +1,6 @@
-ttf-cousine-nerd
-alacritty
 xfce4
 xfce4-goodies
+pulseaudio
+pavucontrol
+ttf-cousine-nerd
+alacritty
