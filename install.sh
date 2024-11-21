@@ -14,21 +14,25 @@ if ! [[ -d $1 ]]; then
   fatal "Not a proper dir is provided"
 fi
 
-pkgfiles_path=$(realpath -s "$1")
-echo $pkgfiles_path
+stage_path=$(realpath -s "$1")
+echo $stage_path
 
-for pkg_file in $pkgfiles_path/*; do
-
-  if [[ `basename $pkg_file` = "postinstall.sh" ]]; then
-    echo "Executing postinstall: $pkg_file"
-    . $pkg_file
-    continue
-  fi
-
+# 1. Install packages from stage
+for pkg_file in $stage_path/*.txt; do
   info "Installing packages: "
   cat $pkg_file | tr '\n' ' '; echo ""
   # Installing the packages
-  if ask "Install `basename $pkg_file`?"; then
+  if ask "Install package `basename $pkg_file`?"; then
     pacman -S --needed --noconfirm - < $pkg_file
   fi
 done
+
+# 2. Copy configs found in stage
+
+# 3. Run postinstall scripts for the stage
+postinstall_script=$stage_path/postinstall.sh
+if [[ -f $postinstall_script ]]; then
+  echo "Executing postinstall script: $postinstall_script"
+  . $postinstall_script
+fi
+
