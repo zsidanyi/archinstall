@@ -1,0 +1,7 @@
+ttf-cousine-nerd
+alacritty
+keepass
+evince
+feh
+vlc
+chromium

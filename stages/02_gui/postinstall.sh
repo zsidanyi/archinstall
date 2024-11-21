@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source utils
-. ~/dotfiles/scripts/utils.sh
+. ~/archinstall/utils/utils.sh
 
 info "Reload for hotplug-monitor service"
 systemctl daemon-reload

@@ -1,0 +1,4 @@
+xorg-server
+xorg-xrandr
+lightdm
+lightdm-gtk-greeter
