@@ -1,0 +1,29 @@
+##################################################
+## Minimal alias file for installation
+##################################################
+
+#########################
+## Aliases to handle config files used commonly
+#########################
+alias ea='vim ~/.bashrc'
+alias sa='source ~/.bashrc'
+alias ev='vim ~/.vimrc'
+
+#########################
+## Aliases to list things
+#########################
+alias ls='ls --color=auto --group-directories-first'
+alias l='ls -lF'
+alias ll='l'
+alias lll='l'
+alias la='ls -ACF'
+alias lla='ll -A'
+alias p='pwd'
+
+alias grep='grep --color=auto'
+
+#########################
+## Aliases to move around
+#########################
+alias ..='cd ..'
+alias ...='cd ..'

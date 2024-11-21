@@ -27,7 +27,5 @@
 # arch-chroot /mnt
 #
 # After chroot
-# pacman-key --init
-# pacman-key --populate
 # pacman -S vim git
 # cd; git clone https://github.com/zsidanyi/archinstall.git

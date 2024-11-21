@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source utils
-. ~/dotfiles/scripts/utils.sh
+. ~/archinstall/utils/utils.sh
 
 # Test for root
 if ! [[ $(id -u) = 0 ]]; then
