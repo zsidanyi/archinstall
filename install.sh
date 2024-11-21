@@ -15,7 +15,7 @@ if ! [[ -d $1 ]]; then
 fi
 
 stage_path=$(realpath -s "$1")
-echo $stage_path
+info "Processing stage: $stage_path"
 
 # 1. Install packages from stage
 for pkg_file in $stage_path/*.txt; do
@@ -30,13 +30,14 @@ done
 # 2. Copy configs found in stage
 stage_config=$stage_path/config
 if [[ -d $stage_config ]]; then
-  cp -R $stage_config/* /
+  info "Copying configuration files: $postinstall_script"
+  cp --verbose -R $stage_config/* /
 fi
 
 # 3. Run postinstall scripts for the stage
 postinstall_script=$stage_path/postinstall.sh
 if [[ -f $postinstall_script ]]; then
-  echo "Executing postinstall script: $postinstall_script"
+  info "Executing postinstall script: $postinstall_script"
   . $postinstall_script
 fi
 
