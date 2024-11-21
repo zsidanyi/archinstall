@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# usage: sudo ./pkginst.sh ./pkg_files/01_basic
+# usage: sudo ./install.sh ./stages/01_basic
 
 # Source utils
 . ~/dotfiles/scripts/utils.sh
@@ -28,6 +28,10 @@ for pkg_file in $stage_path/*.txt; do
 done
 
 # 2. Copy configs found in stage
+stage_config=$stage_path/config
+if [[ -d $stage_config ]]; then
+  cp -R $stage_config/* /
+fi
 
 # 3. Run postinstall scripts for the stage
 postinstall_script=$stage_path/postinstall.sh
