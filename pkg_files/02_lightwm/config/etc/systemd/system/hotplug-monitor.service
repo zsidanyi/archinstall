@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor hotplug service
+
+[Service]
+Type=simple
+# TODO USER only needed if need to run as system unit
+USER=%I
+ExecStart=/usr/local/bin/hotplug-monitor.sh
+
+[Install]
+WantedBy=multi-user.target

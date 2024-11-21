@@ -1,0 +1,5 @@
+efibootmgr
+grub
+intel-ucode
+dhcpcd
+sudo

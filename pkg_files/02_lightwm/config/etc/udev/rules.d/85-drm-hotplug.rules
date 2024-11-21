@@ -1,0 +1,2 @@
+# udev rule for starting systemd service when monitor is plugged
+ACTION=="change", KERNEL=="card1", SUBSYSTEM=="drm", RUN+="/usr/bin/systemctl --no-block start hotplug-monitor.service"
