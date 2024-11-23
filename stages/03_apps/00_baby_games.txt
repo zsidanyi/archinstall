@@ -1,0 +1,3 @@
+gcompris-qt
+palapeli
+atomix
