@@ -1,3 +1,4 @@
 gcompris-qt
+ktuberling
 palapeli
 atomix
