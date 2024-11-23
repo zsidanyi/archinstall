@@ -18,7 +18,7 @@
 # Install arch with pacstrap script
 # pacman-key --init
 # pacman-key --populate
-# pacstrap -K /mnt base linux linux-firmware
+# pacstrap -K /mnt base linux linux-lts linux-firmware
 #
 # Generate filesystem table to automount next time
 # genfstab -U /mnt >> /mnt/etc/fstab
