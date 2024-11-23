@@ -1,5 +1,9 @@
 gcc
 clang
+make
+cmake
+strace
+ltrace
 tmux
 fzf
 ripgrep
