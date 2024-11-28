@@ -5,3 +5,4 @@ fastfetch
 ncdu
 rsync
 ranger
+#ntfs-3g # For mounting NTFS partitioned ext drives

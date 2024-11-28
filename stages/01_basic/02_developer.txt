@@ -2,9 +2,17 @@ gcc
 clang
 make
 cmake
+gdb
+# pwndbg #gdb extension
 strace
 ltrace
 tmux
 fzf
 ripgrep
 neovim
+qemu-desktop
+# qemu-base #headless
+qemu-emulators-full
+virt-manager
+dnsmasq
+# ollama

@@ -2,3 +2,4 @@ gcompris-qt
 ktuberling
 palapeli
 atomix
+supertuxkart

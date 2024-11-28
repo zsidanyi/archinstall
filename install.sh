@@ -23,7 +23,8 @@ for pkg_file in $stage_path/*.txt; do
   cat $pkg_file | tr '\n' ' '; echo ""
   # Installing the packages
   if ask "Install package `basename $pkg_file`?"; then
-    pacman -S --needed --noconfirm - < $pkg_file
+    # Process only lines which are not commented out
+    pacman -S --needed --noconfirm $(grep -v "^#" $pkg_file)
   fi
 done
 
