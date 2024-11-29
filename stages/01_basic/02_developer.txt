@@ -3,7 +3,7 @@ clang
 make
 cmake
 gdb
-# pwndbg #gdb extension
+# pwndbg              # Extensions for GDB
 strace
 ltrace
 tmux
@@ -11,8 +11,9 @@ fzf
 ripgrep
 neovim
 qemu-desktop
-# qemu-base #headless
-qemu-emulators-full
+# qemu-base           # Headless version of qemu
+qemu-emulators-full   # All emulators not just x86 (ARM, MIPS, PPC etc.)
 virt-manager
-dnsmasq
+dnsmasq               # Virtual DNS and DHCP server
+dmidecode             # DMI decode table
 # ollama

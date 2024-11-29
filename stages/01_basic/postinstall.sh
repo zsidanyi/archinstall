@@ -6,8 +6,8 @@
 info "setting pwndbg for gdb"
 echo 'source /usr/share/pwndbg/gdbinit.py' >> ~/.gdbinit
 
-info "enable qemu"
-sudo systemctl enable libvirtd.service
+info "enable libvirt daemon and add user to libvirt groups"
+systemctl enable libvirtd.service
 usermod -aG libvirt-qemu zsidanyi
 usermod -aG libvirt zsidanyi
 
