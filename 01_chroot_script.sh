@@ -56,6 +56,8 @@ if ask "Install grub?"; then
     --efi-directory=/boot \
     --bootloader-id=GRUB
 
+  cp --verbose -R $(dirname "$0")/stages/00_chroot/config/* /
+
   grub-mkconfig -o /boot/grub/grub.cfg
 fi
 

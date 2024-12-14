@@ -4,11 +4,13 @@ make
 cmake
 gdb
 # pwndbg              # Extensions for GDB
+wget
 strace
 ltrace
 tmux
 fzf
 ripgrep
+lazygit
 neovim
 qemu-desktop
 # qemu-base           # Headless version of qemu
